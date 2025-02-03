@@ -8,14 +8,11 @@
     <link rel="stylesheet" href="<?= base_url('css/bootstrap.css')?>"></script>
     
     <link rel="stylesheet" href="<?= base_url('vendors/chartjs/Chart.min.css')?>"></script>
-
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url('vendors/perfect-scrollbar/perfect-scrollbar.css')?>"></script>
     <link rel="stylesheet" href="<?= base_url('css/app.css')?>"></script>
     <link rel="shortcut icon" href="<?= base_url('images/' . $setting->logo) ?>" type="image/x-icon">
 </head>
-
-
-
 
 <body>
     <div id="app">
@@ -82,17 +79,17 @@ if(session()->get('level') == 1)
     }?> 
 
 <?php
-if(session()->get('level') == 1 || session()->get('level')==2|| session()->get('level')==3|| session()->get('level')==4|| session()->get('level')==5) 
+if(session()->get('level') == 1 || session()->get('level')==2) 
 {
 ?>
                     
                
 
-                <li class="sidebar-item <?= ($currentMenu == 'pengumuman') ? 'active' : '' ?>">
+                <li class="sidebar-item <?= ($currentMenu == 'agenda') ? 'active' : '' ?>">
 
-                <a href="<?= base_url("home/pengumuman")?>" class='sidebar-link'>
+                <a href="<?= base_url("home/agenda")?>" class='sidebar-link'>
                         <i data-feather="file-plus" width="20"></i> 
-                        <span>PENGUMUMAN</span>
+                        <span>AGENDA</span>
                     </a>
 </li>
 
@@ -102,17 +99,17 @@ if(session()->get('level') == 1 || session()->get('level')==2|| session()->get('
     }?> 
 
 <?php
-if(session()->get('level') == 1 || session()->get('level')==2|| session()->get('level')==3|| session()->get('level')==4|| session()->get('level')==5|| session()->get('level')==6|| session()->get('level')==7) 
+if(session()->get('level') == 1 || session()->get('level')==2|| session()->get('level')==3) 
 {
 ?>
                     
                
 
-                <li class="sidebar-item <?= ($currentMenu == 'pemberitahuan') ? 'active' : '' ?>">
+                <li class="sidebar-item <?= ($currentMenu == 'agendamurid') ? 'active' : '' ?>">
 
-                <a href="<?= base_url("home/pemberitahuan")?>" class='sidebar-link'>
+                <a href="<?= base_url("home/agendamurid")?>" class='sidebar-link'>
                         <i data-feather="clipboard" width="20"></i> 
-                        <span>PEMBERITAHUAN</span>
+                        <span>AGENDA MURID</span>
                     </a>
 </li>
 
@@ -154,7 +151,7 @@ if(session()->get('level') == 1)
                 
                 
                 
-<li class="sidebar-item has-sub <?= ($currentMenu == 'restore_user' || $currentMenu == 'restore_kelas' || $currentMenu == 'restore_pengumuman' || $currentMenu == 'restore_jurusan') ? 'active' : '' ?>">
+<li class="sidebar-item has-sub <?= ($currentMenu == 'restore_user' || $currentMenu == 'restore_kelas' || $currentMenu == 'restore_agenda' || $currentMenu == 'restore_jurusan') ? 'active' : '' ?>">
 
                 <a href="#" class='sidebar-link'>
         <i data-feather="trash" width="20"></i> 
@@ -165,21 +162,21 @@ if(session()->get('level') == 1)
     <ul class="submenu ">
     
     <li>
-        <a href="<?= base_url("home/restore_user")?>">RESTORE USER</a>
+        <a href="<?= base_url("home/restore_user")?>">USER</a>
     </li> 
 
 
     
     <li>
-        <a href="<?= base_url("home/restore_kelas")?>">RESTORE KELAS</a>
+        <a href="<?= base_url("home/restore_kelas")?>">KELAS</a>
     </li>
 
     <li>
-        <a href="<?= base_url("home/restore_jurusan")?>">RESTORE JURUSAN</a>
+        <a href="<?= base_url("home/restore_jurusan")?>">JURUSAN</a>
     </li>
 
     <li>
-        <a href="<?= base_url("home/restore_pengumuman")?>">RESTORE PENGUMUMAN</a>
+        <a href="<?= base_url("home/restore_agenda")?>">AGENDA</a>
     </li>
     
     
@@ -211,9 +208,7 @@ if(session()->get('level') == 1)
                        
                     <li class="dropdown">
                             <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                                <div class="avatar me-1">
-                                    <img src="<?= base_url("images/". session()->get('foto') )?>" alt="" srcset="">
-                                </div>
+                               
                                  <div class="d-none d-md-block d-lg-inline-block">Hi, <?= session()->get('nama')?></div>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
@@ -227,6 +222,10 @@ if(session()->get('level') == 1)
                     </ul>
                 </div>
             </nav>
+            
+
+           
+
             
 
            
@@ -260,7 +259,8 @@ if(session()->get('level') == 1)
 </html>
            
 
-			<footer>
+		
+<footer>
                 <div class="footer clearfix mb-0 text-muted">
                    
                 </div>
@@ -274,7 +274,9 @@ if(session()->get('level') == 1)
     <script src="<?= base_url('vendors/chartjs/Chart.min.js')?>"></script>
     <script src="<?= base_url('vendors/apexcharts/apexcharts.min.js')?>"></script>
     <script src="<?= base_url('js/pages/dashboard.js')?>"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url('js/main.js')?>"></script>
 </body>
 </html>
