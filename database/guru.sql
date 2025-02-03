@@ -11,7 +11,7 @@
  Target Server Version : 100427 (10.4.27-MariaDB)
  File Encoding         : 65001
 
- Date: 04/02/2025 01:54:25
+ Date: 04/02/2025 03:22:33
 */
 
 SET NAMES utf8mb4;
@@ -27,7 +27,7 @@ CREATE TABLE `activity_log`  (
   `activity` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `timestamp` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2711 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2738 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of activity_log
@@ -903,6 +903,33 @@ INSERT INTO `activity_log` VALUES (2707, 27, 'Mengakses halaman dashboard', '202
 INSERT INTO `activity_log` VALUES (2708, 27, 'Mengakses halaman agenda murid', '2025-02-04 01:38:56');
 INSERT INTO `activity_log` VALUES (2709, 1, 'Mengakses halaman dashboard', '2025-02-04 01:50:11');
 INSERT INTO `activity_log` VALUES (2710, 1, 'Mengakses halaman agenda', '2025-02-04 01:50:15');
+INSERT INTO `activity_log` VALUES (2711, 1, 'Mengakses halaman agenda', '2025-02-04 01:56:44');
+INSERT INTO `activity_log` VALUES (2712, 1, 'Mengakses halaman agenda', '2025-02-04 01:57:02');
+INSERT INTO `activity_log` VALUES (2713, 1, 'Mengakses halaman agenda', '2025-02-04 02:01:13');
+INSERT INTO `activity_log` VALUES (2714, 1, 'Mengakses halaman agenda', '2025-02-04 02:03:15');
+INSERT INTO `activity_log` VALUES (2715, 1, 'Mengakses halaman agenda', '2025-02-04 02:03:31');
+INSERT INTO `activity_log` VALUES (2716, 1, 'Mengakses halaman agenda', '2025-02-04 02:06:23');
+INSERT INTO `activity_log` VALUES (2717, 1, 'Mengakses halaman agenda', '2025-02-04 02:08:00');
+INSERT INTO `activity_log` VALUES (2718, 1, 'Mengakses halaman agenda', '2025-02-04 02:08:11');
+INSERT INTO `activity_log` VALUES (2719, 1, 'Mengakses halaman agenda', '2025-02-04 02:10:43');
+INSERT INTO `activity_log` VALUES (2720, 1, 'Mengakses halaman agenda', '2025-02-04 02:14:59');
+INSERT INTO `activity_log` VALUES (2721, 1, 'Mengakses halaman agenda', '2025-02-04 02:15:13');
+INSERT INTO `activity_log` VALUES (2722, 1, 'Mengakses halaman agenda', '2025-02-04 02:17:54');
+INSERT INTO `activity_log` VALUES (2723, 1, 'Mengakses halaman agenda', '2025-02-04 02:18:06');
+INSERT INTO `activity_log` VALUES (2724, 1, 'Mengakses halaman agenda', '2025-02-04 02:21:14');
+INSERT INTO `activity_log` VALUES (2725, 1, 'Mengakses halaman agenda', '2025-02-04 02:23:26');
+INSERT INTO `activity_log` VALUES (2726, 1, 'Mengakses halaman agenda', '2025-02-04 02:31:00');
+INSERT INTO `activity_log` VALUES (2727, 1, 'Mengakses halaman agenda', '2025-02-04 02:32:25');
+INSERT INTO `activity_log` VALUES (2728, 1, 'Mengakses halaman agenda', '2025-02-04 02:45:16');
+INSERT INTO `activity_log` VALUES (2729, 1, 'Mengakses halaman agenda', '2025-02-04 02:46:55');
+INSERT INTO `activity_log` VALUES (2730, 1, 'Mengakses halaman agenda', '2025-02-04 02:48:20');
+INSERT INTO `activity_log` VALUES (2731, 1, 'Mengakses halaman agenda', '2025-02-04 02:50:47');
+INSERT INTO `activity_log` VALUES (2732, 1, 'Mengakses halaman restore agenda', '2025-02-04 02:54:29');
+INSERT INTO `activity_log` VALUES (2733, 1, 'Mengakses halaman restore agenda', '2025-02-04 02:56:41');
+INSERT INTO `activity_log` VALUES (2734, 1, 'Mengakses halaman restore agenda', '2025-02-04 02:57:20');
+INSERT INTO `activity_log` VALUES (2735, 1, 'Mengakses halaman restore agenda', '2025-02-04 02:57:59');
+INSERT INTO `activity_log` VALUES (2736, 1, 'Merestore agenda', '2025-02-04 02:58:04');
+INSERT INTO `activity_log` VALUES (2737, 1, 'Mengakses halaman restore agenda', '2025-02-04 02:58:04');
 
 -- ----------------------------
 -- Table structure for agenda
@@ -922,13 +949,14 @@ CREATE TABLE `agenda`  (
   `deleted_by` int NULL DEFAULT NULL,
   `isdelete` int NOT NULL,
   `status` int NOT NULL,
+  `sent_time` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`id_agenda`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of agenda
 -- ----------------------------
-INSERT INTO `agenda` VALUES (21, 27, 0, '2025-02-04 01:27:00', 'temui pak if di lab', '2025-02-03 16:52:44', 1, NULL, NULL, NULL, NULL, 0, 0);
+INSERT INTO `agenda` VALUES (21, 27, 0, '2025-02-04 02:51:00', 'temui pak if di lab', '2025-02-03 16:52:44', 1, NULL, NULL, NULL, NULL, 0, 1, NULL);
 
 -- ----------------------------
 -- Table structure for backup_agenda
@@ -948,6 +976,7 @@ CREATE TABLE `backup_agenda`  (
   `deleted_by` int NULL DEFAULT NULL,
   `isdelete` int NOT NULL,
   `status` int NOT NULL,
+  `sent_time` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`id_agenda`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
