@@ -952,7 +952,7 @@ public function kelas()
             $this->addLog($id_user, $activity);
     
             // Ambil data user dengan level 5 (untuk wali kelas)
-        $whereUser = ['level' => 5, 'isdelete' => 0];
+        $whereUser = ['level' => 2, 'isdelete' => 0];
         $data['guru'] = $model->getWhereres('user', $whereUser); // Ambil data user dengan level 5
 
 
@@ -983,7 +983,7 @@ public function kelas()
         $data['elly']=$model->getwhere('kelas',$where);
 
         // Ambil data user dengan level 5 (untuk wali kelas)
-        $whereUser = ['level' => 5, 'isdelete' => 0];
+        $whereUser = ['level' => 2, 'isdelete' => 0];
         $data['guru'] = $model->getWhereres('user', $whereUser); // Ambil data user dengan level 5
 
 
